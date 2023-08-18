@@ -2959,6 +2959,8 @@ const getUser = () =>
 const gameEnd = () =>
   parent.postMessage({ playdeck: { method: "gameEnd" } }, "*");
 
+
+console.log("not loaded");
 // loading();
 // setTimeout(() => {
 //   loading(100);
