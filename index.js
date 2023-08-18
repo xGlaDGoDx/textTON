@@ -2928,8 +2928,8 @@ window.addEventListener("message", ({ data }) => {
 
 const parent = window.parent.window;
 
-// const loading = (value) =>
-//   parent.postMessage({ playdeck: { method: "loading", value: value } }, "*");
+const loading = (value) =>
+  parent.postMessage({ playdeck: { method: "loading", value: value } }, "*");
 
 const getPlaydeckState = (value) =>
   parent.postMessage({ playdeck: { method: "getPlaydeckState" } }, "*");
@@ -2960,7 +2960,7 @@ const gameEnd = () =>
   parent.postMessage({ playdeck: { method: "gameEnd" } }, "*");
 
 
-// loading();
-// setTimeout(() => {
-//   loading(100);
-// }, 5000);
+loading();
+setTimeout(() => {
+  loading(100);
+}, 5000);
